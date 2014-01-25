@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Josefin Sans';
+  font-size: 62.5%;
+
+  > article {
+    @include outer-container;
+  }
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
