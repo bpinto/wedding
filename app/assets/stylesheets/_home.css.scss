@@ -7,6 +7,15 @@ body {
 
   > article {
     @include outer-container;
+    margin-top: 110px;
+    padding: 10px;
+
+    > div > .title {
+      font-family: Sacramento;
+      font-size: 5.0em;
+      text-align: center;
+      margin: 30px 0;
+    }
   }
 }
 
