@@ -1,0 +1,42 @@
+.new_post, .edit_post {
+  input[type='text'], textarea {
+    border: 1px dashed $pink;
+    color: $gray;
+    font-family: 'Josefin Sans';
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+
+    @include placeholder {
+      color: darken($pink, 10%);
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 1.5em;
+  }
+
+  input[type='submit'] {
+    background-color: white;
+    border: 1px dashed $pink;
+    color: darken($pink, 10%);
+    cursor: pointer;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($pink, 40%);
+      border: 1px dashed darken($pink, 40%);
+    }
+  }
+}
+
+h1 {
+  font-family: Sacramento;
+  font-size: 4em;
+  text-align: center;
+}
