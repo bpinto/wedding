@@ -7,6 +7,6 @@ $('.show-menu').click ->
   false
 
 $('.read-more').click ->
-  $(this).parent().hide()
-  $(this).parent().siblings('.content').show()
+  $(this).parents('.content').hide()
+  $(this).parents('.content').siblings('.content').show()
   false
