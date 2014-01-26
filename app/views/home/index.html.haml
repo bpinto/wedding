@@ -1,6 +1,6 @@
 %section.my_wedding
   .title Nosso Casamento
 
-  =render partial: 'home/entry'
-  =render partial: 'home/entry'
+  - @posts.each do |post|
+    = render partial: 'home/post', locals: { post: post }
 
