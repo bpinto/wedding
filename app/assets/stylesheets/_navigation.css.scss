@@ -19,10 +19,13 @@ body > nav {
 }
 
 @include media($computer) {
+  body > nav + article {
+    margin-top: 110px;
+  }
+
   body > nav {
     background-color: white;
     box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.1);
-    margin-bottom: 110px;
     padding: 20px;
 
     position: fixed;
@@ -95,6 +98,10 @@ body > nav {
   body {
     @include transition(all 0.3s ease);
     left: 0;
+  }
+
+  body > nav + article {
+    margin-top: 50px;
   }
 
   body > nav {
