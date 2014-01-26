@@ -1,4 +1,6 @@
 body > nav {
+  z-index: 1000;
+
   ul {
     margin: 0;
     padding: 0;
@@ -98,7 +100,6 @@ body > nav {
   body > nav {
     @include transition(all 0.3s ease);
     background-color: lighten($pink, 10%);
-    z-index: 1000;
 
     position: fixed;
     height: 100%;

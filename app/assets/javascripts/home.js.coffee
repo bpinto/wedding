@@ -6,3 +6,7 @@ $('.show-menu').click ->
   $('body').toggleClass('menu-open')
   false
 
+$('.read-more').click ->
+  $(this).parent().hide()
+  $(this).parent().siblings('.content').show()
+  false

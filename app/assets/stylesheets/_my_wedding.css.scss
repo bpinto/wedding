@@ -27,7 +27,7 @@
         margin-left: 0.5em;
       }
 
-      a.continue {
+      a.read-more {
         color: $gray;
         font-size: 0.9em;
         margin-left: 6px;
@@ -37,6 +37,18 @@
           color: $pink;
         }
       }
+
+      &.expanded {
+        display: none;
+      }
     }
   }
+}
+
+.fb-comments {
+  margin-top: 40px;
+}
+
+.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
+  width: 100% !important;
 }

@@ -22,6 +22,8 @@
   = csrf_meta_tag
 
 %body
+  =render partial: 'javascripts/facebook'
+
   %nav
     .top-menu
       =link_to 'Menu', '#', class: 'show-menu'
@@ -35,9 +37,9 @@
       %li= link_to 'Cerimônia', root_path
       %li= link_to 'Fotos', root_path
       .logo
-        .name
+        .name<
           Bruno
-          %span.heart &hearts;
+          %span.heart> &hearts;
           Bianca
         .date 30 de Agosto, 2014
       %li= link_to 'Lista de Presentes', root_path
