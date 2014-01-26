@@ -20,7 +20,7 @@ body > nav {
 
 @include media($computer) {
   body > nav + article {
-    margin-top: 110px;
+    margin-top: 20px;
   }
 
   body > nav {

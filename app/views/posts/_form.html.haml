@@ -1,6 +1,6 @@
 = form_for post do |f|
   .field
-    = f.text_field :title, placeholder: 'Título'
+    = f.text_field :title, placeholder: 'Título', autofocus: true
 
   .field
     = f.text_area :content, placeholder: 'Mensagem', rows: 10
