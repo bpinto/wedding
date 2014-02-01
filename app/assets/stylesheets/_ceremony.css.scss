@@ -14,8 +14,8 @@
 
   h2 {
     font-size: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 6%;
+    margin-bottom: 4%;
     text-align: center;
   }
 
@@ -24,11 +24,11 @@
     line-height: 1.2em;
 
     &:first-letter {
-      margin-left: 2em;
+      margin-left: 4%;
     }
   }
 
-  p + img {
-    margin-top: 8em;
+  article + article {
+    margin-top: 12%;
   }
 }
