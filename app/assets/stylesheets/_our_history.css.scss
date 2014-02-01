@@ -1,0 +1,81 @@
+#our_history {
+  @include outer-container;
+
+  h3 {
+    color: $pink;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .moment {
+    float: left;
+    padding-top: 2em;
+    position: relative;
+    width: 50%;
+
+    @include media($mobile) {
+      float: none;
+      margin-left: auto!important;
+      margin-right: auto!important;
+      margin-top: 0!important;
+      width: 80%;
+    }
+
+    .title {
+      color: $pink;
+      font-size: 2em;
+    }
+
+    img {
+      border: 10px solid $white;
+      box-shadow: 0 0 10px $black;
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+
+  .moment.left {
+    border-right: 1px solid $pink;
+    padding-right: 3em;
+    text-align: right;
+
+    @include media($mobile) {
+      border-left: 1px solid $pink;
+      border-right: none;
+      padding-left: 3em;
+      padding-right: 0;
+      text-align: left;
+    }
+  }
+
+  .moment.right {
+    border-left: 1px solid $pink;
+    margin-left: -1px;
+    margin-top: 5em;
+    padding-left: 3em;
+    text-align: left;
+  }
+
+  .moment:before {
+    background-color: $pink;
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 3em;
+    width: 2.3em;
+  }
+
+  .moment.left:before {
+    right: 0;
+
+    @include media($mobile) {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  .moment.right:before {
+    left: 0;
+  }
+}
