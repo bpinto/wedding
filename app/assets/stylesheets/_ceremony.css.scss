@@ -3,7 +3,7 @@
     display: block;
     margin: auto auto;
 
-    border: 10px solid $white;
+    border: 1em solid $white;
     box-shadow: 0 0 10px $black;
 
     height: auto;
@@ -11,7 +11,7 @@
     max-height: 300px;
 
     @include media($mobile) {
-      max-width: 300px;
+      max-width: 290px;
     }
   }
 
