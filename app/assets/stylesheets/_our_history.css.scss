@@ -109,12 +109,12 @@
     }
 
     .heart {
-      font-size: 5em;
+      font-size: 4em;
       position: relative;
 
       &:nth-child(1) {
         color: lighten($pink, 5%);
-        left: -30px;
+        left: -25px;
 
         @include media($mobile) {
           display: none;
@@ -123,7 +123,8 @@
 
       &:nth-child(2) {
         color: darken($pink, 5%);
-        left: -45px;
+        font-size: 5em;
+        left: -40px;
         z-index: 2;
 
         @include media($mobile) {
@@ -133,7 +134,7 @@
 
       &:nth-child(3) {
         color: lighten($pink, 5%);
-        left: -60px;
+        left: -55px;
 
         @include media($mobile) {
           display: none;
