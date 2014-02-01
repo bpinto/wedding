@@ -1,6 +1,7 @@
-%section#our_wedding
-  .title Nosso Casamento
+- if @posts.any?
+  %section#our_wedding
+    .title Nosso Casamento
 
-  - @posts.each do |post|
-    = render partial: 'home/post', locals: { post: post }
+    - @posts.each do |post|
+      = render partial: 'home/post', locals: { post: post }
 
