@@ -90,4 +90,36 @@
   .moment.right:before {
     left: 0;
   }
+
+  .hearts {
+    text-align: center;
+
+    @include media($mobile) {
+      position: relative;
+      left: -16px;
+      text-align: left;
+    }
+
+    .heart {
+      font-size: 5em;
+      position: relative;
+
+      &:first-child {
+        left: 16px;
+      }
+
+      &:last-child {
+        right: 16px;
+      }
+
+      &:nth-child(odd) {
+        color: lighten($pink, 5%);
+      }
+
+      &:nth-child(even) {
+        color: darken($pink, 5%);
+        z-index: 2;
+      }
+    }
+  }
 }
