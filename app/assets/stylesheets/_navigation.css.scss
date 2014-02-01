@@ -125,7 +125,7 @@ body > nav {
       @include transition(all $time ease);
       background-color: lighten($pink, 10%);
       display: block;
-      height: 40px;
+      height: 45px;
 
       position: fixed;
       top: 0;
@@ -133,7 +133,7 @@ body > nav {
       right: 0;
 
       .name {
-        font-size: 2.3em;
+        font-size: 3em;
         font-family: Sacramento;
         text-align: center;
         padding: 5px 0;
@@ -144,10 +144,27 @@ body > nav {
       }
 
       .show-menu {
-        font-size: 2.0em;
-        margin: 13px 10px 0 0;
+        background: $black;
+        box-shadow: 0 0.25em 0 0 $black, 0 0.5em 0 0 $black;
+        font-size: 2em;
+        text-indent: -9999px;
+
+        content: '';
         position: absolute;
-        right: 0;
+        right: 15px;
+        top: 20px;
+        width: 1em;
+        height: 0.15em;
+
+        &:before {
+          content: '';
+          display: block;
+
+          position: absolute;
+          right: -15px;
+          top: -20px;
+          padding: 30px;
+        }
       }
     }
 
