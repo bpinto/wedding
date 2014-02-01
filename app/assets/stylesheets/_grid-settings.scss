@@ -4,7 +4,7 @@
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 10;
-$max-width: em(1088);
+$max-width: em(1088, 10);
 
 // Define your breakpoints
 $computer: new-breakpoint(min-width 769px 10);
