@@ -9,7 +9,7 @@
 
   .moment {
     @include span-columns(5);
-    @include omega;	
+    @include omega;
 
     padding-top: flex-gutter();
     position: relative;
@@ -102,7 +102,7 @@
   }
 
   .hearts {
-    margin: flex-grid(5);
+    margin: 0 flex-grid(5);
 
     @include media($mobile) {
       margin: 0;
