@@ -3,6 +3,9 @@
     display: block;
     margin: auto auto;
 
+    border: 10px solid $white;
+    box-shadow: 0 0 10px $black;
+
     height: auto;
     width: auto;
     max-height: 300px;
