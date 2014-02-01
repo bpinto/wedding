@@ -32,6 +32,16 @@
       margin: 10px 0;
       width: 100%;
     }
+
+    p {
+      font-size: 1.6em;
+    }
+
+    p:first-child:first-letter {
+      font-family: Sacramento;
+      font-size: 2.5em;
+      margin-left: 0.5em;
+    }
   }
 
   .moment.left {
