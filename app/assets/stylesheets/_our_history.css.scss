@@ -8,23 +8,21 @@
   }
 
   .moment {
-    float: left;
-    padding-top: 2em;
+    @include span-columns(5);
+    @include omega;	
+
+    padding-top: flex-gutter();
     position: relative;
-    width: 50%;
 
     @include media($mobile) {
-      float: none;
-      margin-left: auto!important;
-      margin-right: auto!important;
-      margin-top: 0!important;
-      width: 80%;
+      @include span-columns(4);
     }
 
     .title {
       color: $pink;
       font-size: 2em;
       margin-bottom: .5em;
+      position: relative;
     }
 
     img {
@@ -48,13 +46,13 @@
 
   .moment.left {
     border-right: 1px solid $pink;
-    padding-right: 3em;
+    padding-right: flex-gutter();
     text-align: right;
 
     @include media($mobile) {
       border-left: 1px solid $pink;
       border-right: none;
-      padding-left: 3em;
+      padding-left: flex-gutter();
       padding-right: 0;
       text-align: left;
     }
@@ -64,61 +62,82 @@
     border-left: 1px solid $pink;
     margin-left: -1px;
     margin-top: 5em;
-    padding-left: 3em;
+    padding-left: flex-gutter();
     text-align: left;
+
+    @include media($mobile) {
+      margin-top: 0;
+      margin-left: 0;
+    }
   }
 
-  .moment:before {
+  .title:before {
     background-color: $pink;
     content: '';
     display: block;
     height: 1px;
-    position: absolute;
-    top: 3em;
-    width: 2.3em;
-  }
 
-  .moment.left:before {
-    right: 0;
+    position: absolute;
+    top: 50%;
+    right: -2 * flex-gutter();
+    margin-right: -0.1em;
+    width: 1.5 * flex-gutter();
 
     @include media($mobile) {
       left: 0;
-      right: auto;
+      width: 0.5 * flex-gutter();
+      margin-left: -0.4em;
     }
   }
 
-  .moment.right:before {
-    left: 0;
+  .right .title:before {
+    left: -2 * flex-gutter();
+    margin-left: -0.1em;
+
+    @include media($mobile) {
+      left: 0;
+      width: 0.5 * flex-gutter();
+      margin-left: -0.4em;
+    }
   }
 
   .hearts {
-    text-align: center;
+    margin: flex-grid(5);
 
     @include media($mobile) {
-      position: relative;
-      left: -16px;
-      text-align: left;
+      margin: 0;
     }
 
     .heart {
       font-size: 5em;
       position: relative;
 
-      &:first-child {
-        left: 16px;
-      }
-
-      &:last-child {
-        right: 16px;
-      }
-
-      &:nth-child(odd) {
+      &:nth-child(1) {
         color: lighten($pink, 5%);
+        left: -30px;
+
+        @include media($mobile) {
+          display: none;
+        }
       }
 
-      &:nth-child(even) {
+      &:nth-child(2) {
         color: darken($pink, 5%);
+        left: -45px;
         z-index: 2;
+
+        @include media($mobile) {
+          left: -15px;
+        }
+      }
+
+      &:nth-child(3) {
+        color: lighten($pink, 5%);
+        left: -60px;
+
+        @include media($mobile) {
+          display: none;
+        }
       }
     }
   }
