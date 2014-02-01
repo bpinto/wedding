@@ -1,3 +1,5 @@
+$time: 0.5s;
+
 body > nav {
   z-index: 1000;
 
@@ -84,6 +86,7 @@ body > nav {
   body.menu-open {
     left: $width;
     overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
 
     nav {
@@ -100,25 +103,26 @@ body > nav {
   }
 
   body {
-    @include transition(all 0.3s ease);
+    @include transition(all $time ease);
     left: 0;
   }
 
   body > nav + article {
-    padding-top: 50px;
+    padding-top: 20px;
   }
 
   body > nav {
-    @include transition(all 0.3s ease);
+    @include transition(all $time ease);
     background-color: lighten($pink, 10%);
 
     position: fixed;
     height: 100%;
     width: $width;
     left: -$width;
+    top: 0;
 
     .top-menu {
-      @include transition(all 0.3s ease);
+      @include transition(all $time ease);
       background-color: lighten($pink, 10%);
       display: block;
       height: 40px;
@@ -178,7 +182,7 @@ body > nav {
       }
 
       a {
-        @include transition(all 0.3s ease);
+        @include transition(all $time ease);
         display: block;
         font-size: 1.5em;
         padding: 15px;
@@ -189,6 +193,12 @@ body > nav {
         }
       }
     }
+  }
+}
+
+@include media($mobile) {
+  body > nav + article {
+    padding-top: 0;
   }
 }
 
