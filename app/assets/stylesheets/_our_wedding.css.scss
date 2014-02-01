@@ -2,12 +2,11 @@
   clear: both;
 
   article {
-    margin: 40px 0;
+    margin: 5% 0;
 
     .title {
       color: $pink;
       font-size: 2.0em;
-      margin: 10px 0;
       text-align: center;
     }
 
@@ -21,18 +20,18 @@
     .content {
       font-size: 1.6em;
       line-height: 1.2em;
-      margin-bottom: 10px;
+      margin-bottom: 2%;
 
       p:first-child:first-letter {
         font-family: Sacramento;
         font-size: 2.5em;
-        margin-left: 0.5em;
+        margin-left: 4%;
       }
 
       a.read-more {
         color: $gray;
         font-size: 0.9em;
-        margin-left: 6px;
+        margin-left: 1%;
         text-decoration: underline;
 
         &:hover {
@@ -52,14 +51,14 @@
         border-top: 1px dashed $pink;
         content: '';
         display: block;
-        margin: 1em 3em 3em;
+        margin: 5% 5% 9%;
       }
     }
   }
 }
 
 .fb-comments {
-  margin-top: 40px;
+  margin-top: 7%;
 }
 
 .fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
