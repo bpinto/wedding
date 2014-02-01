@@ -14,7 +14,11 @@ body {
       text-align: center;
 
       @include media($computer) {
-        margin: 2em 0 0.5em;
+        margin: 10% 0 3%;
+      }
+
+      @include media($mobile) {
+        margin: 15% 0 0;
       }
     }
   }

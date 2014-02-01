@@ -16,11 +16,15 @@ body > nav {
     padding: 2em 0.5em!important;
     font-size: 0.9em!important;
   }
+
+  body > nav + article {
+    margin-top: 15px!important;
+  }
 }
 
 @include media($computer) {
   body > nav + article {
-    margin-top: 20px;
+    margin-top: -20px;
   }
 
   body > nav {
