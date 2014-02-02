@@ -9,6 +9,17 @@ body > nav {
   }
 }
 
+//This gives the body the menu margin
+body > nav + article {
+  @include media($computer) {
+    margin-top: 115px;
+  }
+
+  @include media($tablet) {
+    margin-top: 55px;
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 920px) {
   .logo {
     padding: 0 1em!important;
@@ -20,15 +31,11 @@ body > nav {
   }
 
   body > nav + article {
-    margin-top: 15px!important;
+    margin-top: 100px!important;
   }
 }
 
 @include media($computer) {
-  body > nav + article {
-    margin-top: -20px;
-  }
-
   body > nav {
     background-color: white;
     box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.1);
@@ -105,10 +112,6 @@ body > nav {
   body {
     @include transition(all $time ease);
     left: 0;
-  }
-
-  body > nav + article {
-    padding-top: 20px;
   }
 
   body > nav {
@@ -210,12 +213,6 @@ body > nav {
         }
       }
     }
-  }
-}
-
-@include media($mobile) {
-  body > nav + article {
-    padding-top: 0;
   }
 }
 
