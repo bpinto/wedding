@@ -24,7 +24,7 @@
 %body
   =render partial: 'javascripts/facebook'
 
-  %nav
+  %nav{ 'data-scroll-header' => true }
     .top-menu
       =link_to 'Menu', '#', class: 'show-menu'
       .name<
@@ -33,18 +33,18 @@
         Bruno
 
     %ul
-      %li= link_to 'Cerimônia', '#ceremony'
-      %li= link_to 'Nosso Casamento', '#our_wedding'
-      %li= link_to 'Fotos', root_path
+      %li= navigation_link_to 'Cerimônia', '#ceremony'
+      %li= navigation_link_to 'Nosso Casamento', '#our_wedding', data: { scroll: true }
+      %li= navigation_link_to 'Fotos', root_path
       .logo
         .name<
           Bianca
           %span.heart> &hearts;
           Bruno
         .date 30 de Agosto, 2014
-      %li= link_to 'Lista de Presentes', root_path
-      %li= link_to 'RSVP', root_path
-      %li= link_to 'Contato', root_path
+      %li= navigation_link_to 'Lista de Presentes', root_path
+      %li= navigation_link_to 'RSVP', root_path
+      %li= navigation_link_to 'Contato', root_path
 
   %article
     = yield
