@@ -10,7 +10,7 @@ body {
 
     > section {
       @include media($computer) {
-        margin: 10% 0 3%;
+        margin: 7% 0 3%;
       }
 
       @include media($tablet) {
