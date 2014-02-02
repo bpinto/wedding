@@ -1,6 +1,4 @@
 #our_history {
-  @include outer-container;
-
   h3 {
     color: $pink;
     font-size: 3em;
@@ -52,7 +50,7 @@
     @include media($mobile) {
       border-left: 1px solid $pink;
       border-right: none;
-      padding-left: flex-gutter();
+      padding-left: 2 * flex-gutter();
       padding-right: 0;
       text-align: left;
     }
@@ -68,10 +66,11 @@
     @include media($mobile) {
       margin-top: 0;
       margin-left: 0;
+      padding-left: 2 * flex-gutter();
     }
   }
 
-  .title:before {
+  .moment .title:before {
     background-color: $pink;
     content: '';
     display: block;
@@ -79,26 +78,23 @@
 
     position: absolute;
     top: 50%;
-    right: -2 * flex-gutter();
-    margin-right: -0.1em;
     width: 1.5 * flex-gutter();
 
     @include media($mobile) {
-      left: 0;
-      width: 0.5 * flex-gutter();
-      margin-left: -0.4em;
+      width: flex-gutter();
+      left: -2 * flex-gutter();
+      margin-left: -0.1em;
     }
   }
 
-  .right .title:before {
+  .moment.left .title:before {
+    right: -2 * flex-gutter();
+    margin-right: -0.1em;
+  }
+
+  .moment.right .title:before {
     left: -2 * flex-gutter();
     margin-left: -0.1em;
-
-    @include media($mobile) {
-      left: 0;
-      width: 0.5 * flex-gutter();
-      margin-left: -0.4em;
-    }
   }
 
   .hearts {
