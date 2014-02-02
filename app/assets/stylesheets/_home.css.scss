@@ -8,17 +8,30 @@ body {
   > article {
     @include outer-container;
 
-    > section > .title {
-      font-family: Sacramento;
-      font-size: 4.9em;
-      text-align: center;
-
+    > section {
       @include media($computer) {
         margin: 10% 0 3%;
       }
 
-      @include media($mobile) {
+      @include media($tablet) {
         margin: 15% 0 0;
+      }
+
+      > .title {
+        font-family: Sacramento;
+        font-size: 4.9em;
+        text-align: center;
+      }
+    }
+
+    //This reverts the code above for the first section
+    > section:first-child {
+      @include media($computer) {
+        margin: 0;
+      }
+
+      @include media($tablet) {
+        margin: 0;
       }
     }
   }
