@@ -52,6 +52,7 @@
 
   .moment.left {
     border-right: 1px solid $pink;
+    clear: left;
     padding-right: flex-gutter();
     text-align: right;
 
@@ -66,6 +67,7 @@
 
   .moment.right {
     border-left: 1px solid $pink;
+    clear: right;
     margin-left: -1px;
     margin-top: 5em;
     padding-left: flex-gutter();
@@ -106,6 +108,7 @@
   }
 
   .hearts {
+    clear: both;
     margin: 0 flex-grid(5);
 
     @include media($mobile) {
