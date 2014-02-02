@@ -20,10 +20,13 @@
       line-height: 1.4em;
       margin-bottom: 2%;
 
+      p:first-letter {
+        margin-left: 4%;
+      }
+
       p:first-child:first-letter {
         font-family: Sacramento;
         font-size: 2.5em;
-        margin-left: 4%;
       }
 
       a.read-more {
