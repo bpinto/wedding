@@ -36,10 +36,17 @@
       line-height: 1.4em;
     }
 
-    p:first-child:first-letter {
+    //Next two selectors add the upcased first letter of the first paragraph
+    p:first-letter {
       font-family: Sacramento;
-      font-size: 2.5em;
+      font-size: 1.5em;
       margin-left: 0.5em;
+    }
+
+    p + p:first-letter {
+      font-family: 'Josefin Sans';
+      font-size: 1em;
+      margin-left: 0;
     }
   }
 
