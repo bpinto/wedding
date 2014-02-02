@@ -3,7 +3,7 @@
 
   article {
     .date {
-      color: $pink;
+      color: $blue-light;
       font-size: 1.2em;
       text-transform: uppercase;
       text-align: right;
@@ -34,7 +34,7 @@
         text-decoration: underline;
 
         &:hover {
-          color: $pink;
+          color: $blue-light;
         }
       }
 
@@ -47,7 +47,7 @@
   article + article {
     h3 {
       &:before {
-        border-top: 1px dashed $pink;
+        border-top: 1px dashed $blue-light;
         content: '';
         display: block;
         margin: 5% 5% 7%;

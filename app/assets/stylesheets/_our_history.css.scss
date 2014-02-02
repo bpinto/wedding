@@ -48,7 +48,7 @@
   }
 
   .moment.left {
-    border-right: 1px solid $pink;
+    border-right: 1px solid $blue-light;
     clear: left;
     padding-right: flex-gutter();
     text-align: right;
@@ -63,7 +63,7 @@
   }
 
   .moment.right {
-    border-left: 1px solid $pink;
+    border-left: 1px solid $blue-light;
     clear: right;
     margin-left: -1px;
     margin-top: 5em;
@@ -78,7 +78,7 @@
   }
 
   .moment h3:before {
-    background-color: $pink;
+    background-color: $blue-light;
     content: '';
     display: block;
     height: 1px;
@@ -118,7 +118,7 @@
       position: absolute;
 
       &:nth-child(1) {
-        color: lighten($pink, 5%);
+        color: lighten($blue-light, 15%);
         left: 2px;
 
         @include media($mobile) {
@@ -127,7 +127,7 @@
       }
 
       &:nth-child(2) {
-        color: darken($pink, 5%);
+        color: $blue-light;
         font-size: 3em;
         left: -15px;
         z-index: 2;
@@ -139,7 +139,7 @@
       }
 
       &:nth-child(3) {
-        color: lighten($pink, 5%);
+        color: lighten($blue-light, 15%);
         left: -27px;
 
         @include media($mobile) {
