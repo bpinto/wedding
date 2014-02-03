@@ -43,7 +43,12 @@ window.smoothScroll = (function (window, document, undefined) {
       var startLocation = window.pageYOffset;
 
       // Get the height of a fixed header if one exists
-      var scrollHeader = document.querySelector('[data-scroll-header]');
+      if($(document).width() <= $('body').attr('data-mobile-width')){
+        var scrollHeader = document.querySelector('[data-scroll-mobile]');
+      }else{
+        var scrollHeader = document.querySelector('[data-scroll-computer]');
+      }
+
       var headerHeight = scrollHeader === null ? 0 : scrollHeader.offsetHeight;
 
       // Set the animation variables to 0/undefined.
