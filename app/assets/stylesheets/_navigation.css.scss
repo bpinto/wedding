@@ -60,6 +60,7 @@ body > nav + article {
 
         .heart {
           color: $pink;
+          font-family: monospace;
         }
       }
 
@@ -88,92 +89,23 @@ body > nav + article {
 }
 
 @include media($tablet) {
-  $width: 190px;
-
-  body.menu-open {
-    left: $width;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    position: relative;
-
-    nav {
-      left: 0;
-    }
-
-    .top-menu {
-      left: $width;
-
-      .name {
-        display: none;
-      }
-    }
-  }
-
-  body {
-    @include transition(all $time ease);
-    left: 0;
-  }
-
+  /* Side menu style */
   body > nav {
-    @include transition(all $time ease);
+    @include transition(opacity 0s .25s);
     background-color: lighten($pink, 10%);
 
     position: fixed;
-    height: 100%;
-    width: $width;
-    left: -$width;
     top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    z-index: 9999;
 
-    .top-menu {
-      @include transition(all $time ease);
-      background-color: lighten($pink, 10%);
-      display: block;
-      height: 45px;
-
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-
-      .name {
-        font-size: 3em;
-        font-family: Sacramento;
-        text-align: center;
-        padding: 5px 0;
-
-        .heart {
-          color: $pink;
-        }
-      }
-
-      .show-menu {
-        background: $black;
-        box-shadow: 0 0.25em 0 0 $black, 0 0.5em 0 0 $black;
-        font-size: 2em;
-        text-indent: -9999px;
-
-        content: '';
-        position: absolute;
-        right: 15px;
-        top: 20px;
-        width: 1em;
-        height: 0.15em;
-
-        &:before {
-          content: '';
-          display: block;
-
-          position: absolute;
-          right: -15px;
-          top: -20px;
-          padding: 30px;
-        }
-      }
-    }
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
     .logo {
       text-align: center;
-
       position: absolute;
       top: 15px;
       left: 0;
@@ -182,6 +114,8 @@ body > nav + article {
       .name {
         font-size: 2.3em;
         font-family: Sacramento;
+        text-align: center;
+        padding: 5px 0;
 
         .heart {
           color: $pink;
@@ -214,5 +148,89 @@ body > nav + article {
       }
     }
   }
-}
 
+  /* Active slide out navigation */
+  #nav-handler ~ nav {
+    @include transform(translate3D(-100%, 0, 0));
+
+    transition: -moz-transform .25s ease-in-out;
+    -moz-transition: -moz-transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+  }
+
+  #nav-handler:checked ~ nav {
+    @include transform(translate3D(0, 0, 0));
+  }
+
+  /* Hide nav handler checkbox */
+  #nav-handler {
+    display: none;
+  }
+
+  /* Top mobile menu style */
+  #mobile-top-menu {
+    background-color: lighten($pink, 10%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 2;
+
+    .name {
+      font-size: 3em;
+      font-family: Sacramento;
+      text-align: center;
+      padding: 5px 0;
+
+      .heart {
+        color: $pink;
+        font-family: monospace;
+      }
+    }
+  }
+
+  /* Header menu button */
+  #menu-button {
+    background: $black;
+    box-shadow: 0 0.25em 0 0 $black, 0 0.5em 0 0 $black;
+    font-size: 2em;
+    text-indent: -9999px;
+
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 1em;
+    height: 0.15em;
+
+    &:before {
+      content: '';
+      display: block;
+
+      position: absolute;
+      right: -15px;
+      top: -20px;
+      padding: 30px;
+    }
+  }
+
+  /* Slide out navigation list items */
+  body > article {
+    @include transform(translate3D(0, 0, 0));
+
+    transition: -moz-transform .25s ease-in-out;
+    -moz-transition: -moz-transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+
+    padding: 45px 0 0 0; /* Top padding must be same as header height */
+    overflow-y: scroll; /* TODO: is this necessary? or hiddeN? */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Translate main container when nav handler is checked */
+  #nav-handler:checked ~ article {
+    @include transform(translate3D(85%, 0, 0));
+  }
+}

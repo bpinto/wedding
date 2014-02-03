@@ -24,14 +24,15 @@
 %body
   =render partial: 'javascripts/facebook'
 
-  %nav{ 'data-scroll-header' => true }
-    .top-menu
-      =link_to 'Menu', '#', class: 'show-menu'
-      .name<
-        Bianca
-        %span.heart> &hearts;
-        Bruno
+  %input{ type: 'checkbox', id: 'nav-handler' }
+  #mobile-top-menu
+    %label{ id: 'menu-button', for: 'nav-handler' } Menu
+    .name<
+      Bianca
+      %span.heart> &hearts;
+      Bruno
 
+  %nav{ 'data-scroll-header' => true }
     %ul
       %li= navigation_link_to 'Cerimônia', '#ceremony'
       %li= navigation_link_to 'Nosso Casamento', '#our_wedding', data: { scroll: true }

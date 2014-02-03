@@ -116,12 +116,13 @@
     }
 
     .heart {
+      font-family: monospace;
       font-size: 4em;
       position: relative;
 
       &:nth-child(1) {
         color: lighten($pink, 5%);
-        left: -25px;
+        left: -21px;
 
         @include media($mobile) {
           display: none;
@@ -131,17 +132,17 @@
       &:nth-child(2) {
         color: darken($pink, 5%);
         font-size: 5em;
-        left: -40px;
+        left: -33px;
         z-index: 2;
 
         @include media($mobile) {
-          left: -15px;
+          left: 0;
         }
       }
 
       &:nth-child(3) {
         color: lighten($pink, 5%);
-        left: -55px;
+        left: -45px;
 
         @include media($mobile) {
           display: none;
