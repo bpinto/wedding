@@ -41,14 +41,19 @@ $(document).ready ->
   google.maps.visualRefresh = true
   mapOptions = {
     center: new google.maps.LatLng(0, 0),
-    zoom: 12
+    zoom: 12,
+    scrollwheel: false,
   };
 
   map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions)
 
+  rendererOptions = {
+    draggable: true
+  };
+
   directionsService = new google.maps.DirectionsService();
 
-  directionsDisplay = new google.maps.DirectionsRenderer()
+  directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions)
   directionsDisplay.setMap(map)
 
   autocomplete = new google.maps.places.Autocomplete(document.getElementById('user-start-point'))
