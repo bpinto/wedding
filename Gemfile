@@ -17,6 +17,9 @@ gem 'neat'
 # Use HAML for views
 gem 'haml-rails'
 
+# Install font awesome
+gem 'font-awesome-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
