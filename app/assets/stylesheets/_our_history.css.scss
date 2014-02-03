@@ -54,7 +54,7 @@
     text-align: right;
 
     @include media($mobile) {
-      border-left: 1px solid $pink;
+      border-left: 1px solid $blue-light;
       border-right: none;
       padding-left: 2 * flex-gutter();
       padding-right: 0;
@@ -118,7 +118,7 @@
       position: absolute;
 
       &:nth-child(1) {
-        color: lighten($blue-light, 15%);
+        color: $blue-lighter;
         left: 2px;
 
         @include media($mobile) {
@@ -139,7 +139,7 @@
       }
 
       &:nth-child(3) {
-        color: lighten($blue-light, 15%);
+        color: $blue-lighter;
         left: -27px;
 
         @include media($mobile) {
