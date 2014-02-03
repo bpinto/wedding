@@ -33,9 +33,14 @@
     p {
       font-size: 1.8em;
       line-height: 1.4em;
+      margin: 0;
 
       &:first-letter {
         margin-left: 4%;
+      }
+
+      span {
+        font-weight: bold;
       }
     }
   }
