@@ -1,8 +1,25 @@
 section#map {
-  @include outer-container;
+  position: relative;
+
+  #user-start-point {
+    border: none;
+    font-size: 2em;
+    left: 5em;
+    line-height: 1.5em;
+    padding: .1em .5em;
+    position: absolute;
+    top: 1.8em;
+    width: 16em;
+    z-index: 100;
+
+    @include media($tablet) {
+      display: none;
+    }
+  }
 
   article {
     height: 450px;
+
 
     @include media($tablet) {
       height: 300px;
@@ -13,6 +30,17 @@ section#map {
       box-shadow: 0 0 10px $black;
       height: 100%;
       width: 100%;
+    }
+
+    a#map-link {
+      display: none;
+
+      @include media($tablet) {
+        display: block;
+        height: 300px;
+        position: absolute;
+        width: 100%;
+      }
     }
   }
 }
