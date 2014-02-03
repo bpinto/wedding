@@ -24,7 +24,11 @@
       20:00h
 
   %article#map
-    = text_field_tag :user_start_point, '', id: 'user-start-point', placeholder: 'Digite aqui seu endereço'
+    .search-box
+      = text_field_tag :user_start_point, '', id: 'user-start-point', placeholder: 'Digite aqui seu endereço'
+      = button_tag do
+        %i.fa.fa-search
+
     .map-container
       = link_to '', 'https://www.google.com/maps/preview/dir/-22.8850746,-43.0319485/Estrada+Pacheco+de+Carvalho,+160+-+Maceio,+RJ,+Brazil/@-22.8851571,-43.0321866,18z/data=!4m11!4m10!1m0!1m5!1m1!1s0x998430a35fa771:0x23d12f9c2b4cf020!2m2!1d-43.0676197!2d-22.9102182!2m1!1b1!3e0?hl=en-US', target: '_blank', id: 'map-link'
       #map_canvas
