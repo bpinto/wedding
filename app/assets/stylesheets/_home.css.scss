@@ -16,13 +16,6 @@ body {
       @include media($tablet) {
         margin: 10% 0 0;
       }
-
-      > .title {
-        font-family: Sacramento;
-        font-size: 4.9em;
-        text-align: center;
-        margin-bottom: 3%;
-      }
     }
 
     //This reverts the code above for the first section
