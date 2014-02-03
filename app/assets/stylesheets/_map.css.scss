@@ -4,10 +4,14 @@ section#map {
   article {
     height: 450px;
 
+    @include media($tablet) {
+      height: 300px;
+    }
+
     #map_canvas {
       border: 1em solid $white;
       box-shadow: 0 0 10px $black;
-      height: 450px;
+      height: 100%;
       width: 100%;
     }
   }
