@@ -19,3 +19,21 @@ $(document).ready ->
   };
 
   map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions)
+
+  directionsService = new google.maps.DirectionsService();
+
+  start = 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
+  end = 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
+
+  request = {
+    origin: start,
+    destination: end,
+    travelMode: google.maps.TravelMode.DRIVING
+  }
+
+  directionsDisplay = new google.maps.DirectionsRenderer()
+  directionsDisplay.setMap(map)
+
+  directionsService.route(request, (result, status) ->
+    directionsDisplay.setDirections(result) if (status == google.maps.DirectionsStatus.OK)
+  )
