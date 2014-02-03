@@ -11,6 +11,32 @@ $('.read-more').click ->
   $(this).parents('.content').siblings('.content').show()
   false
 
+calcRoute = (autocomplete, directionsService, directionsDisplay) ->
+  church = 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
+  party = 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
+  userPlace = autocomplete.getPlace()
+
+  if userPlace && userPlace.geometry
+    userStart = userPlace.geometry.location
+    request = {
+      origin: userStart,
+      destination: party,
+      waypoints: [{ location: church, stopover: true }],
+      travelMode: google.maps.TravelMode.DRIVING
+    }
+
+  else
+    $('#user-start-point').val('')
+    request = {
+      origin: church,
+      destination: party,
+      travelMode: google.maps.TravelMode.DRIVING
+    }
+
+  directionsService.route(request, (result, status) ->
+    directionsDisplay.setDirections(result) if (status == google.maps.DirectionsStatus.OK)
+  )
+
 $(document).ready ->
   google.maps.visualRefresh = true
   mapOptions = {
@@ -22,41 +48,13 @@ $(document).ready ->
 
   directionsService = new google.maps.DirectionsService();
 
-  church = 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
-  party = 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
-
-  request = {
-    origin: church,
-    destination: party,
-    travelMode: google.maps.TravelMode.DRIVING
-  }
-
   directionsDisplay = new google.maps.DirectionsRenderer()
   directionsDisplay.setMap(map)
 
-  directionsService.route(request, (result, status) ->
-    directionsDisplay.setDirections(result) if (status == google.maps.DirectionsStatus.OK)
-  )
-
   autocomplete = new google.maps.places.Autocomplete(document.getElementById('user-start-point'))
 
+  calcRoute(autocomplete, directionsService, directionsDisplay)
+
   google.maps.event.addListener(autocomplete, 'place_changed', () ->
-    calcRoute()
+    calcRoute(autocomplete, directionsService, directionsDisplay)
   )
-
-  calcRoute = () ->
-    userPlace = autocomplete.getPlace()
-    if userPlace.geometry
-      userStart = userPlace.geometry.location
-      request = {
-        origin: userStart,
-        destination: party,
-        waypoints: [{ location: church, stopover: true }],
-        travelMode: google.maps.TravelMode.DRIVING
-      }
-
-      directionsService.route(request, (result, status) ->
-        directionsDisplay.setDirections(result) if (status == google.maps.DirectionsStatus.OK)
-      )
-    else
-      $('#user-start-point').val('')
