@@ -46,10 +46,6 @@ body > nav + article {
     left: 0;
     right: 0;
 
-    .top-menu {
-      display: none;
-    }
-
     .logo {
       display: inline-block;
       padding: 0 4em;
@@ -85,6 +81,10 @@ body > nav + article {
         text-transform: uppercase;
       }
     }
+  }
+
+  #mobile-top-menu {
+    display: none;
   }
 }
 
@@ -156,10 +156,13 @@ body > nav + article {
     transition: -moz-transform .25s ease-in-out;
     -moz-transition: -moz-transform .25s ease-in-out;
     -webkit-transition: -webkit-transform .25s ease-in-out;
+
+    opacity: 0; /* Do not show nav when resizing browser */
   }
 
   #nav-handler:checked ~ nav {
     @include transform(translate3D(0, 0, 0));
+    opacity: 1;
   }
 
   /* Hide nav handler checkbox */
