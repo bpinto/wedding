@@ -91,7 +91,6 @@ body > nav + article {
 @include media($tablet) {
   /* Side menu style */
   body > nav {
-    @include transition(opacity 0s .25s);
     background-color: lighten($pink, 10%);
 
     position: fixed;
@@ -156,13 +155,10 @@ body > nav + article {
     transition: -moz-transform .25s ease-in-out;
     -moz-transition: -moz-transform .25s ease-in-out;
     -webkit-transition: -webkit-transform .25s ease-in-out;
-
-    opacity: 0; /* Do not show nav when resizing browser */
   }
 
   #nav-handler:checked ~ nav {
     @include transform(translate3D(0, 0, 0));
-    opacity: 1;
   }
 
   /* Hide nav handler checkbox */
@@ -228,7 +224,6 @@ body > nav + article {
     -webkit-transition: -webkit-transform .25s ease-in-out;
 
     padding: 45px 0 0 0; /* Top padding must be same as header height */
-    overflow-y: scroll; /* TODO: is this necessary? or hiddeN? */
     -webkit-overflow-scrolling: touch;
   }
 
