@@ -107,19 +107,19 @@
   .hearts {
     clear: both;
     margin: 0 flex-grid(5);
+    position: relative;
 
     @include media($mobile) {
       margin: 0;
     }
 
     .heart {
-      font-family: monospace;
       font-size: 4em;
-      position: relative;
+      position: absolute;
 
       &:nth-child(1) {
         color: lighten($pink, 5%);
-        left: -21px;
+        left: 3px;
 
         @include media($mobile) {
           display: none;
@@ -129,17 +129,18 @@
       &:nth-child(2) {
         color: darken($pink, 5%);
         font-size: 5em;
-        left: -33px;
+        left: -25px;
         z-index: 2;
 
         @include media($mobile) {
+          font-size: 2.5em;
           left: 0;
         }
       }
 
       &:nth-child(3) {
         color: lighten($pink, 5%);
-        left: -45px;
+        left: -43px;
 
         @include media($mobile) {
           display: none;
