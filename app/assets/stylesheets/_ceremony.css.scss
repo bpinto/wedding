@@ -46,8 +46,9 @@
   }
 
   article#map {
-    position: relative;
     @include span-columns(10);
+    margin-top: 3em;
+    position: relative;
 
     #user-start-point {
       border: none;
@@ -67,7 +68,6 @@
 
     .map-container {
       height: 450px;
-
 
       @include media($tablet) {
         height: 300px;
