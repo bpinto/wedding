@@ -1,18 +1,20 @@
 #couple {
-  display: table;
+  @include media($computer) {
+    display: table;
 
-  .column {
-    display: table-cell;
-    width: flex-grid(5);
-  }
+    .column {
+      display: table-cell;
+      width: flex-grid(5);
+    }
 
-  .column:first-child {
-    vertical-align: middle;
-  }
+    .column:first-child {
+      vertical-align: middle;
+    }
 
-  .spacer {
-    display: table-cell;
-    width: flex-gutter();
+    .spacer {
+      display: table-cell;
+      width: flex-gutter();
+    }
   }
 
   p {
@@ -24,23 +26,6 @@
     }
   }
 
-  .img-effect {
-    position: relative;
-
-    &:before, &:after {
-      border-radius: 100px / 10px;
-      box-shadow: 0 0 2em rgba(0, 0, 0, 0.8);
-      content: '';
-
-      position: absolute;
-      top: 50%;
-      bottom: 0;
-      left: 10px;
-      right: 10px;
-      z-index: -1;
-    }
-  }
-
   img {
     display: block;
     margin: auto auto;
@@ -49,6 +34,11 @@
     max-width: 100%;
 
     border: 1em solid $white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 10px $black;
+
+    @include media($tablet) {
+      max-height: 90%;
+      max-width: 90%;
+    }
   }
 }
