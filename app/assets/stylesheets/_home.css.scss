@@ -38,19 +38,6 @@ body {
   }
 }
 
-a {
-  color: $black;
-  text-decoration: none;
-
-  &:hover {
-    color: $pink;
-  }
-}
-
-p {
-  text-align: justify;
-}
-
 footer {
   padding: 50px;
 }

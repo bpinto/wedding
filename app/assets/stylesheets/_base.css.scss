@@ -1,3 +1,16 @@
 section {
   clear: both;
 }
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+p {
+  text-align: justify;
+}
