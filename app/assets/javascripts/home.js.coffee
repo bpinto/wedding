@@ -22,12 +22,12 @@ $(document).ready ->
 
   directionsService = new google.maps.DirectionsService();
 
-  start = 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
-  end = 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
+  church = 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
+  party = 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
 
   request = {
-    origin: start,
-    destination: end,
+    origin: church,
+    destination: party,
     travelMode: google.maps.TravelMode.DRIVING
   }
 
@@ -37,3 +37,26 @@ $(document).ready ->
   directionsService.route(request, (result, status) ->
     directionsDisplay.setDirections(result) if (status == google.maps.DirectionsStatus.OK)
   )
+
+  autocomplete = new google.maps.places.Autocomplete(document.getElementById('user-start-point'))
+
+  google.maps.event.addListener(autocomplete, 'place_changed', () ->
+    calcRoute()
+  )
+
+  calcRoute = () ->
+    userPlace = autocomplete.getPlace()
+    if userPlace.geometry
+      userStart = userPlace.geometry.location
+      request = {
+        origin: userStart,
+        destination: party,
+        waypoints: [{ location: church, stopover: true }],
+        travelMode: google.maps.TravelMode.DRIVING
+      }
+
+      directionsService.route(request, (result, status) ->
+        directionsDisplay.setDirections(result) if (status == google.maps.DirectionsStatus.OK)
+      )
+    else
+      $('#user-start-point').val('')
