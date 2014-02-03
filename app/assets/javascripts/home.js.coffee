@@ -2,13 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$('.show-menu').click ->
-  $('body').toggleClass('menu-open')
-  false
-
 $('.read-more').click ->
   $(this).parents('.content').hide()
   $(this).parents('.content').siblings('.content').show()
+  false
+
+$('nav ul li a').click ->
+  $('#menu-button').click()
   false
 
 calcRoute = (autocomplete, directionsService, directionsDisplay) ->
