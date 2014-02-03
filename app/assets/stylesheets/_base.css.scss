@@ -1,7 +1,6 @@
 section {
-  clear: both;
+  @include row();
 }
-
 a {
   color: $black;
   text-decoration: none;

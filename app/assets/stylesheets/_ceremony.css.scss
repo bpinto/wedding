@@ -1,6 +1,4 @@
 #ceremony {
-  @include row();
-
   article {
     @include span-columns(5);
 
@@ -15,31 +13,92 @@
     }
   }
 
-  img {
-    display: block;
-    margin: auto auto;
-
-    border: 1em solid $white;
-    box-shadow: 0 0 10px $black;
-
-    height: 90%;
-    width: 90%;
-    max-height: 300px;
+  article#party {
+    @include omega();
   }
 
-  h2 {
-    font-size: 2em;
-    margin-top: 6%;
-    margin-bottom: 4%;
-    text-align: center;
+  article#church, article#party {
+    img {
+      display: block;
+      margin: auto auto;
+
+      border: 1em solid $white;
+      box-shadow: 0 0 10px $black;
+
+      height: 90%;
+      width: 90%;
+      max-height: 300px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-top: 6%;
+      margin-bottom: 4%;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.8em;
+      line-height: 1.4em;
+
+      &:first-letter {
+        margin-left: 4%;
+      }
+    }
   }
 
-  p {
-    font-size: 1.8em;
-    line-height: 1.4em;
+  article#map {
+    position: relative;
+    @include span-columns(10);
 
-    &:first-letter {
-      margin-left: 4%;
+    #user-start-point {
+      border: none;
+      font-size: 2em;
+      left: 5em;
+      line-height: 1.5em;
+      padding: .1em .5em;
+      position: absolute;
+      top: 1.8em;
+      width: 16em;
+      z-index: 100;
+
+      @include media($tablet) {
+        display: none;
+      }
+    }
+
+    .map-container {
+      height: 450px;
+
+
+      @include media($tablet) {
+        height: 300px;
+      }
+
+      #map_canvas {
+        border: 1em solid $white;
+        box-shadow: 0 0 10px $black;
+        height: 100%;
+        width: 100%;
+
+        @include media($tablet) {
+          margin: 0 auto;
+          width: 90%;
+        }
+      }
+
+      a#map-link {
+        display: none;
+
+        @include media($tablet) {
+          display: block;
+          height: 300px;
+          left: 5%;
+          position: absolute;
+          width: 90%;
+          z-index: 100;
+        }
+      }
     }
   }
 }
