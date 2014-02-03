@@ -53,6 +53,10 @@
       top: 4em;
       z-index: 100;
 
+      @include media($tablet) {
+        display: none;
+      }
+
       button {
         background-color: darken($pink, 10%);
         @include background-image(linear-gradient(top, $pink, #ff8da1));
@@ -89,10 +93,6 @@
         &:focus {
           border: 1px solid $pink;
           outline: none;
-        }
-
-        @include media($tablet) {
-          display: none;
         }
       }
     }
