@@ -1,0 +1,14 @@
+section#map {
+  @include outer-container;
+
+  article {
+    height: 450px;
+
+    #map_canvas {
+      border: 1em solid $white;
+      box-shadow: 0 0 10px $black;
+      height: 450px;
+      width: 100%;
+    }
+  }
+}

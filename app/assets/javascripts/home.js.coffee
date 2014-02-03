@@ -10,3 +10,12 @@ $('.read-more').click ->
   $(this).parents('.content').hide()
   $(this).parents('.content').siblings('.content').show()
   false
+
+$(document).ready ->
+  google.maps.visualRefresh = true
+  mapOptions = {
+    center: new google.maps.LatLng(0, 0),
+    zoom: 12
+  };
+
+  map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions)
