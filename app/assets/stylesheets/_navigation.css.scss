@@ -53,6 +53,8 @@ body > nav + article {
       .name {
         font-size: 2.4em;
         font-family: Sacramento;
+        height: 35px;
+        vertical-align: top;
 
         .heart {
           color: $blue-light;

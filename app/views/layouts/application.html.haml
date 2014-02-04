@@ -35,7 +35,7 @@
     %label{ id: 'menu-button', for: 'nav-handler' } Menu
     .name<
       Bruna
-      %i.heart.fa.fa-heart
+      %img{ src: asset_path('rings.png') }
       João Paulo
 
   %nav{ 'data-scroll-computer' => true }
@@ -46,7 +46,7 @@
       .logo
         .name<
           Bruna
-          %i.heart.fa.fa-heart
+          %img{ src: asset_path('rings.png') }
           João Paulo
         .date 09 de Agosto, 2014
       %li= navigation_link_to 'Lista de Presentes', root_path

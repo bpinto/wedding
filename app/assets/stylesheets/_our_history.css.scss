@@ -48,13 +48,13 @@
   }
 
   .moment.left {
-    border-right: 1px solid $blue-light;
+    border-right: 1px solid $gold;
     clear: left;
     padding-right: flex-gutter();
     text-align: right;
 
     @include media($mobile) {
-      border-left: 1px solid $blue-light;
+      border-left: 1px solid $gold;
       border-right: none;
       padding-left: 2 * flex-gutter();
       padding-right: 0;
@@ -63,7 +63,7 @@
   }
 
   .moment.right {
-    border-left: 1px solid $blue-light;
+    border-left: 1px solid $gold;
     clear: right;
     margin-left: -1px;
     margin-top: 5em;
@@ -78,7 +78,7 @@
   }
 
   .moment h3:before {
-    background-color: $blue-light;
+    background-color: $gold;
     content: '';
     display: block;
     height: 1px;
@@ -111,6 +111,15 @@
 
     @include media($mobile) {
       margin: 0;
+    }
+
+    img {
+      left: -15px;
+      position: absolute;
+
+      @include media($mobile) {
+        left: 0;
+      }
     }
 
     .heart {
