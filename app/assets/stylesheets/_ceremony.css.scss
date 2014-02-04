@@ -58,8 +58,8 @@
       }
 
       button {
-        background-color: darken($pink, 10%);
-        @include background-image(linear-gradient(top, $pink, #ff8da1));
+        background-color: darken($blue-light, 10%);
+        @include background-image(linear-gradient(top, $blue-light, lighten($blue-light, 5%)));
 
         border: 0;
         border-radius: 0 2px 2px 0;
