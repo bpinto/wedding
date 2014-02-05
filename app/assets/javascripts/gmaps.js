@@ -22,16 +22,16 @@ var Gmaps = {
   locations: {
     church: {
       address: 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570',
-      icon: '/assets/church-marker.png',
+      icon: '/assets/church_marker.png',
       title: 'Capela São Sebastião'
     },
     party: {
       address: 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ',
-      icon: '/assets/party-marker.png',
+      icon: '/assets/party_marker.png',
       title: 'Casa de Festas Solarium'
     },
     home: {
-      icon: '/assets/home-marker.png',
+      icon: '/assets/home_marker.png',
       title: 'Sua Casa'
     }
   },
