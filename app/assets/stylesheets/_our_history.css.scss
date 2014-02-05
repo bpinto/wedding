@@ -48,13 +48,13 @@
   }
 
   .moment.left {
-    border-right: 1px solid $gold;
+    border-right: 1px solid $goldenrod;
     clear: left;
     padding-right: flex-gutter();
     text-align: right;
 
     @include media($mobile) {
-      border-left: 1px solid $gold;
+      border-left: 1px solid $goldenrod;
       border-right: none;
       padding-left: 2 * flex-gutter();
       padding-right: 0;
@@ -63,7 +63,7 @@
   }
 
   .moment.right {
-    border-left: 1px solid $gold;
+    border-left: 1px solid $goldenrod;
     clear: right;
     margin-left: -1px;
     margin-top: 5em;
@@ -78,7 +78,7 @@
   }
 
   .moment h3:before {
-    background-color: $gold;
+    background-color: $goldenrod;
     content: '';
     display: block;
     height: 1px;
