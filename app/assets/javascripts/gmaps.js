@@ -108,8 +108,11 @@ var Gmaps = {
                 Gmaps.homeMarker = Gmaps.makeMarker(leg.start_location, Gmaps.locations.home.icon, Gmaps.locations.home.title)
               }
             })
-          }else
+          }else{
+            // erases search input if google returns nothing in text search
+            $('#user-start-point').val('')
             Gmaps.directionsDisplay.setDirections(Gmaps.defaultRoute)
+          }
         })
       }else{
         Gmaps.directionsDisplay.setDirections(Gmaps.defaultRoute)
