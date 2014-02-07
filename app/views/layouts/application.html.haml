@@ -40,18 +40,19 @@
 
   %nav{ 'data-scroll-computer' => true }
     %ul
-      %li= navigation_link_to 'Cerimônia', '#ceremony'
-      %li= navigation_link_to 'Nosso Casamento', '#our_wedding'
-      %li= navigation_link_to 'Fotos', root_path
+      %li= navigation_link_to 'Nosso Casamento', '#ceremony'
+      / %li= navigation_link_to 'Nosso Casamento', '#our_wedding'
+      / %li= navigation_link_to 'Fotos', root_path
       .logo
-        .name<
-          Bruna
-          %img{ src: asset_path('rings.png') }
-          João Paulo
-        .date 09 de Agosto, 2014
-      %li= navigation_link_to 'Lista de Presentes', root_path
-      %li= navigation_link_to 'RSVP', root_path
-      %li= navigation_link_to 'Contato', root_path
+        = link_to '#nav-handler', class: 'logo', data: { scroll: true } do
+          .name<
+            Bruna
+            %img{ src: asset_path('rings.png') }
+            João Paulo
+          .date 09 de Agosto, 2014
+      %li= navigation_link_to 'Nossa História', '#our_history'
+      / %li= navigation_link_to 'RSVP', root_path
+      / %li= navigation_link_to 'Contato', root_path
 
   %article
     = yield
