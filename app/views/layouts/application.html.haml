@@ -31,12 +31,9 @@
   = csrf_meta_tag
 
 %body{ 'data-mobile-width' => 768 }
-  :plain
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ODl6XHDVqXIugBZlDK4jwLKQqyuldn8&sensor=true"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
+  %script{ type: 'text/javascript', src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ODl6XHDVqXIugBZlDK4jwLKQqyuldn8&libraries=places&sensor=true' }
 
-
-  =render partial: 'javascripts/facebook'
+  = render partial: 'javascripts/facebook'
 
   %input{ type: 'checkbox', id: 'nav-handler' }
   #mobile-top-menu{ 'data-scroll-mobile' => true }
