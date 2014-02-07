@@ -41,17 +41,13 @@
   %nav{ 'data-scroll-computer' => true }
     %ul
       %li= navigation_link_to 'Cerimônia', '#ceremony'
-      %li= navigation_link_to 'Nosso Casamento', '#our_wedding'
-      %li= navigation_link_to 'Fotos', root_path
       .logo
         .name<
           Bianca
           %i.heart.fa.fa-heart
           Bruno
         .date 30 de Agosto, 2014
-      %li= navigation_link_to 'Lista de Presentes', root_path
-      %li= navigation_link_to 'RSVP', root_path
-      %li= navigation_link_to 'Contato', root_path
+      %li= navigation_link_to 'Nosso Casamento', '#our_wedding'
 
   %article
     = yield
