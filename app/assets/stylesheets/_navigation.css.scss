@@ -12,7 +12,7 @@ body > nav {
 //This gives the body the menu margin
 body > nav + article {
   @include media($computer) {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   @include media($tablet) {
@@ -31,7 +31,7 @@ body > nav + article {
   }
 
   body > nav + article {
-    margin-top: 30px!important;
+    margin-top: 60px!important;
   }
 }
 
