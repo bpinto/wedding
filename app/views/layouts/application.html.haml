@@ -49,7 +49,7 @@
   %nav{ 'data-scroll-computer' => true }
     %ul
       %li= navigation_link_to 'Cerimônia', '#ceremony'
-      .logo
+      = link_to '#nav-handler', class: 'logo', data: { scroll: true } do
         .name<
           Bianca
           %i.heart.fa.fa-heart
