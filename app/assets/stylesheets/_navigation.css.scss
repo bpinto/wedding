@@ -85,6 +85,11 @@ body > nav + article {
   #mobile-top-menu {
     display: none;
   }
+
+  /* Hide nav handler checkbox */
+  #nav-handler {
+    display: none;
+  }
 }
 
 @include media($tablet) {
