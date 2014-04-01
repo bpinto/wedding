@@ -5,6 +5,5 @@
     = simple_format(truncate(post.content, length: 350) { link_to 'Ler mais', '#', class: 'read-more' })
   .content.expanded
     %span= simple_format post.content
-    .fb-comments{ data: { href: post_url(post), numposts: '5', colorscheme: 'light' } }
 
   .date= l Date.today, format: :small
