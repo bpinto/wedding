@@ -20,12 +20,12 @@ window.Gmaps =
 
   locations:
     church:
-      address: 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
+      address: 'Rua Sete de Setembro, 14 - Centro, RJ, 20050-009, Brazil'
       icon: '/church_marker.png'
       title: 'Capela São Sebastião'
 
     party:
-      address: 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
+      address: 'Estrada dos Três Rios, n° 2.134 - Freguesia - Jacarepaguá, Rio de Janeiro'
       icon: '/party_marker.png'
       title: 'Casa de Festas Solarium'
 
@@ -34,8 +34,8 @@ window.Gmaps =
       title: 'Sua Casa'
 
   defaultRequest:
-    origin: 'Estrada Caetano Monteiro, 104 - Badu, RJ, 24320-570'
-    destination: 'Estrada Pacheco de Carvalho, 160 - Maceio, RJ'
+    origin: 'Rua Sete de Setembro, 14 - Centro, RJ, 20050-009, Brazil'
+    destination: 'Estrada dos Três Rios, n° 2.134 - Freguesia - Jacarepaguá, Rio de Janeiro'
     travelMode: google.maps.TravelMode.DRIVING
 
   defaultRoute: null
