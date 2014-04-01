@@ -88,7 +88,7 @@ body > nav + article {
 
   /* Hide nav handler checkbox */
   #nav-handler {
-    display: none;
+    visibility: hidden;
   }
 }
 
