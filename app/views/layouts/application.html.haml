@@ -35,10 +35,11 @@
   %input{ type: 'checkbox', id: 'nav-handler' }
   #mobile-top-menu{ 'data-scroll-mobile' => true }
     %label{ id: 'menu-button', for: 'nav-handler' } Menu
-    .name<
-      Bruna
-      %img{ src: asset_path('rings.png') }
-      João Paulo
+    = link_to '#nav-handler', class: 'logo', data: { scroll: true } do
+      .name<
+        Bruna
+        %img{ src: asset_path('rings.png') }
+        João Paulo
 
   %nav{ 'data-scroll-computer' => true }
     %ul

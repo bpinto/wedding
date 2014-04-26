@@ -1,12 +1,15 @@
 section {
   @include row();
+  background-color: lighten($pink, 10%);
+  border: 1px dashed $pink;
+  padding: 10px;
 }
 a {
   color: $black;
   text-decoration: none;
 
   &:hover {
-    color: $goldenrod;
+    color: $blue-lighter;
   }
 }
 
@@ -31,7 +34,7 @@ h2 {
 }
 
 h3 {
-  color: $goldenrod;
+  color: $blue-light;
   font-size: 2.0em;
   font-weight: normal;
   text-align: center;
