@@ -14,8 +14,10 @@
  */
 
 @import "bourbon";
+@import 'gallery/touch_touch';
 @import "grid-settings";
 @import "neat";
+
 @import "fonts";
 @import "colors";
 @import 'base';
@@ -25,4 +27,4 @@
 @import "couple";
 @import "our_wedding";
 @import "our_history";
-@import "posts";
+@import "pictures";

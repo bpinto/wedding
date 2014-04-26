@@ -1,0 +1,26 @@
+#gallery {
+  #thumbs {
+    margin: 10px;
+    width: auto;
+
+    a {
+      border-color: $white;
+      box-shadow: 0 0 10px $black;
+
+      img {
+        height: 106px;
+        width: 106px;
+      }
+
+      &:after {
+        background: transparent;
+        box-shadow: none;
+
+        color: $blue-light;
+        font-size: 15px;
+
+        bottom: -10px;
+      }
+    }
+  }
+}
