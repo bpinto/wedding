@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140126151451) do
+ActiveRecord::Schema.define(version: 20140517194944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "guests", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "confirmed"
+    t.text     "companions", array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "guests", ["companions"], name: "index_guests_on_companions", using: :gin
 
   create_table "posts", force: true do |t|
     t.string   "title"
