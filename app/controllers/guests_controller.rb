@@ -4,7 +4,6 @@ class GuestsController < ApplicationController
   end
 
   def create
-    binding.pry
     @guest = Guest.new guest_params
     if @guest.save
       redirect_to root_path
