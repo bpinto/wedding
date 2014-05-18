@@ -1,0 +1,48 @@
+section#rsvp {
+  input[type='text'], textarea {
+    @include transition(all 0.3s ease);
+    border: 1px solid $blue-light;
+    color: $gray;
+    font-family: 'Josefin Sans';
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+
+    @include placeholder {
+      color: darken($blue-light, 10%);
+    }
+
+    &:focus {
+      border: 1px solid darken($blue-light, 20%);
+      outline: none;
+
+      @include placeholder {
+        color: lighten($blue-light, 10%);
+      }
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 2em;
+    color: darken($blue-light, 10%);
+  }
+
+  input[type='submit'] {
+    background-color: white;
+    border: 1px solid $blue-light;
+    color: darken($blue-light, 10%);
+    cursor: pointer;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: darken($blue-light, 40%);
+      border-color: darken($blue-light, 40%);
+      outline: none;
+    }
+  }
+}

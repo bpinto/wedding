@@ -208,6 +208,11 @@ pt-BR:
     errors:
       <<: *errors
   activerecord:
+    attributes:
+      guest:
+       confirmed: 'Sim, marcarei prsença na festa!'
+       name: 'Nome'
+       email: 'Email'
     errors:
       <<: *errors
 

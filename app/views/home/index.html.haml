@@ -2,3 +2,6 @@
 = render partial: 'home/ceremony'
 = render partial: 'home/our_history'
 = render 'home/pictures'
+
+= content_for :javascript do
+  = javascript_include_tag :home

@@ -4,6 +4,7 @@ class GuestsController < ApplicationController
   end
 
   def create
+    binding.pry
     @guest = Guest.new guest_params
     if @guest.save
       redirect_to root_path
@@ -15,6 +16,6 @@ class GuestsController < ApplicationController
   protected
 
   def guest_params
-    params.require(:guest).permit(:name, :email, :total_guests, :companies, :confirmed?)
+    params.require(:guest).permit(:name, :email, :total_guests, :confirmed, companions: [])
   end
 end
