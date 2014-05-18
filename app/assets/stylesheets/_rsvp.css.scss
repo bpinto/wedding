@@ -1,11 +1,53 @@
 section#rsvp {
+  .row {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  input[type='radio'] {
+    float: left;
+    margin: 2px;
+  }
+
+  .select {
+    @include transition(all 0.3s ease);
+    background: $white;
+    border: 1px solid $blue-light;
+    color: darken($blue-light, 10%);
+    float: left;
+    font-family: 'Josefin Sans';
+    font-size: 2em;
+
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 0;
+      right: 6px;
+    }
+
+    select {
+      margin-top: 0;
+      color: darken($blue-light, 10%);
+      font-size: 14px;
+      background: transparent;
+      width: 45px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 0;
+      height: 28px;
+      line-height: 30px;
+      -webkit-appearance: none;
+    }
+  }
+
   input[type='text'], textarea {
     @include transition(all 0.3s ease);
     border: 1px solid $blue-light;
     color: $gray;
     font-family: 'Josefin Sans';
     font-size: 2em;
-    margin-bottom: 20px;
     padding: 10px;
     width: 100%;
 
@@ -24,9 +66,10 @@ section#rsvp {
   }
 
   label {
-    display: block;
     font-size: 2em;
     color: darken($blue-light, 10%);
+    margin: 1px 15px 0 5px;
+    float: left;
   }
 
   input[type='submit'] {

@@ -3,17 +3,25 @@
   %h3 Confirme sua presença na nossa festa
 
   = form_for @guest do |f|
-    = f.radio_button :confirmed, true
-    = f.label :confirmed_true, 'Sim, marcarei presença na festa!'
-    = f.radio_button :confirmed, false
-    = f.label :confirmed_true, 'Infelizmente não poderei ir.'
-    = f.text_field :name, placeholder: 'Seu Nome', autofocus: true
-    = f.text_field :email, placeholder: 'Seu Email'
-    = f.label :total_guests, 'Total de convidados'
-    = f.select :total_guests, [1,2,3,4,5,6,7,8]
+    .row
+      = f.radio_button :confirmed, true
+      = f.label :confirmed_true, 'Sim, marcarei presença na festa!'
+      = f.radio_button :confirmed, false
+      = f.label :confirmed_true, 'Infelizmente não poderei ir.'
+    .row
+      = f.text_field :name, placeholder: 'Seu Nome', autofocus: true
+    .row
+      = f.text_field :email, placeholder: 'Seu Email'
+    .row
+      = f.label :total_guests, 'Total de convidados'
+      .select
+        %i.fa.fa-sort-down
+        = f.select :total_guests, [1,2,3,4,5,6,7,8]
+
     .guests
       - 7.times do |i|
-        = f.text_field "companions", name: "guest[companions][]", placeholder: 'Nome do convidado'
+        .row
+          = f.text_field "companions", name: "guest[companions][]", placeholder: 'Nome do convidado'
 
     = f.submit 'Confirmar'
 
