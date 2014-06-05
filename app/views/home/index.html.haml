@@ -1,7 +1,8 @@
-= render partial: 'home/couple'
-= render partial: 'home/ceremony'
-= render partial: 'home/our_history'
+= render 'home/couple'
+= render 'home/ceremony'
+= render 'home/our_history'
 = render 'home/pictures'
+= render 'home/gifts'
 
 = content_for :javascript do
   = javascript_include_tag asset_path('home.js')

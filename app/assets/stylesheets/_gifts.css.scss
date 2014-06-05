@@ -1,0 +1,29 @@
+#gifts {
+  ul {
+    list-style: none;
+
+    margin: 0 auto;
+    padding: 0;
+    width: 560px;
+
+    @include media($tablet) {
+      width: 280px;
+    }
+  }
+
+  li {
+    float: left;
+
+    margin: 20px;
+    padding: 0!important;
+
+    height: 100px;
+    width: 100px;
+
+    a {
+      display: block;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
