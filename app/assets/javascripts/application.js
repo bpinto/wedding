@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require smooth-scroll
-//= require gmaps
 //= require home
+//= require gmaps
 //= require gallery/touch_touch
 //= require jquery/jquery.easing-1.3
 //= require jquery/jquery.elastislide
