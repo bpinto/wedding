@@ -3,5 +3,5 @@
 = render partial: 'home/our_history'
 = render 'home/pictures'
 
-/ = content_for :javascript do
-/   = javascript_include_tag :home
+= content_for :javascript do
+  = javascript_include_tag asset_path('home.js')
