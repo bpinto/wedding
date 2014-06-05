@@ -1,0 +1,24 @@
+%p
+  Total de confirmados
+  = @total_confirmed
+
+%p
+  Total de ausentes
+  = @total_unconfirmed
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Confirmado?
+      %th Companhias
+      %th Total de convidados
+  %tbody
+    - @guests.each do |guest|
+      %tr
+        %td= guest.name
+        %td= guest.confirmed? ? 'Sim' : 'Não'
+        %td
+          - unless guest.companions.blank?
+            = guest.companions.join(', ')
+        %td= guest.total_guests

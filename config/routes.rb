@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get :rsvp, to: 'guests#new', as: :rsvp
 
-  resources :guests, only: [:create]
+  resources :guests, only: [:create, :index]
 end
