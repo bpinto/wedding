@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require smooth-scroll
+//= require jquery.grid-a-licious
 //= require_tree .

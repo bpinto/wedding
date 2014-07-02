@@ -1,0 +1,6 @@
+%h1 Lista de Presentes
+
+#grid
+  - @products.each do |product|
+    = render partial: 'product', locals: { product: product }
+
