@@ -46,14 +46,14 @@
     %ul
       %li= navigation_link_to 'Cerimônia', '#ceremony'
       %li= navigation_link_to 'Nossa História', '#our_history'
-      = link_to '#nav-handler', class: 'logo', data: { scroll: true } do
+      = link_to (request.path == root_path ? '' : root_path) + '#nav-handler', class: 'logo', data: { scroll: true } do
         .name<
           Bianca
           %i.heart.fa.fa-heart
           Bruno
         .date 30 de Agosto, 2014
       %li= navigation_link_to 'Nosso Casamento', '#our_wedding'
-      %li= navigation_link_to 'Lista de Presentes', products_path
+      %li= link_to 'Lista de Presentes', products_path
 
   %article
     = yield

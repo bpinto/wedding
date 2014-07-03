@@ -7,7 +7,7 @@ $('.read-more').click ->
   $(this).parents('.content').siblings('.content').show()
   false
 
-$('nav ul li a').click ->
+$('nav ul li a.nav-link').click ->
   $('#menu-button').click()
   false
 
