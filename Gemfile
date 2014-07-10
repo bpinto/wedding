@@ -42,7 +42,7 @@ gem 'sdoc',          group: :doc, require: false
 gem 'spring',        group: :development
 
 # Send email
-gem 'mandrill'
+gem 'mandrill-api'
 
 # Heroku
 gem 'rails_12factor', group: :production

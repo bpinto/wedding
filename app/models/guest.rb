@@ -1,3 +1,5 @@
+require 'mandrill'
+
 class Guest < ActiveRecord::Base
   belongs_to :product
 
