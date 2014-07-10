@@ -16,6 +16,6 @@ class GuestsController < ApplicationController
   protected
 
   def guest_params
-    params.require(:guest).permit(:name, :companies, :confirmed?, :email, :email_message, :product_id, :total_guests)
+    params.require(:guest).permit(:name, :companies, :confirmed?, :email, :email_message, :phone_number, :product_id, :total_guests)
   end
 end
