@@ -1,4 +1,4 @@
-%a.product{ href: '#', 'data-price' => product.price }
+%a.product{ href: product_path(product), 'data-price' => product.price }
   .name= product.name
   %img{ src: product.image_url }
   .price= product.price

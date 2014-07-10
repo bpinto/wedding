@@ -1,6 +1,8 @@
-%h1 Lista de Presentes
+.products
+  %h1 Lista de Presentes
+  %p Amigos e familiares, selecionamos alguns presentes que adoraríamos receber, mas como muitos já sabem pretendemos morar fora do Rio de Janeiro o que torna a lista de presentes convencional difícil de ser utilizada. Nossa lista é virtual. Você seleciona o produto e depois efetua um depósito correspondente ao valor do presente.
 
-#grid
-  - @products.each do |product|
-    = render partial: 'product', locals: { product: product }
+  #grid
+    - @products.each do |product|
+      = render partial: 'product', locals: { product: product }
 

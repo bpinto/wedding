@@ -1,0 +1,14 @@
+%section#product
+  %h1= @product.name
+  %img{ src: @product.image_url }
+
+  %p Obrigado pelo presente. Como dissemos, nossa lista de presentes é virtual. Para completar a compra, |
+  por favor, faça um depósito ou transferência, para a seguinte conta bancária: |
+
+  .bank
+    <em>Banco:</em> Itaú &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Tipo de Conta:</em> Poupança</br></br>
+    <em>Agência:</em>  0387 &nbsp;&nbsp;&nbsp;&nbsp;<em>Conta:</em>  10246-0/500</br></br>
+    <em>Valor:</em> #{@product.price}
+
+  %p Não esqueça de nos mandar uma mensagem abaixo!
+

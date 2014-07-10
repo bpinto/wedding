@@ -1,3 +1,17 @@
+.products {
+  p {
+    font-size: 1.8em;
+    line-height: 1.4em;
+    margin-bottom: 3em;
+  }
+
+  p:first-letter {
+    font-family: Sacramento;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+  }
+}
+
 .product {
   background-color: $white;
   border: 1px solid $light-gray;
@@ -41,5 +55,40 @@
     left: 0;
     right: 0;
     text-align: center;
+  }
+}
+
+#product {
+  p {
+    font-size: 1.8em;
+    line-height: 1.4em;
+  }
+
+  p:first-letter {
+    font-family: Sacramento;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 10em auto;
+    min-height: 160px;
+    width: 160px;
+  }
+
+  .bank {
+    border: 1px dashed $pink;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+
+    margin: 2em 0;
+    padding: 1em;
+
+    em {
+      font-style: normal;
+      font-weight: normal;
+    }
   }
 }
