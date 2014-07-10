@@ -304,9 +304,3 @@ Product.create(
   name: 'Migalheiro MS Madeiras - Ms Madeiras',
   price: 'R$ 77,00'
 )
-
-Product.create(
-  image_url: '',
-  name: '',
-  price: ''
-)
