@@ -1,6 +1,7 @@
 %section#product
-  %h1= @product.name
+  %h1 Presente
   %img{ src: @product.image_url }
+  .name= @product.name
 
   %p Obrigado pelo presente. Como dissemos, nossa lista de presentes é virtual. Para completar a compra, |
   por favor, faça um depósito ou transferência, para a seguinte conta bancária: |
@@ -10,5 +11,19 @@
     <em>Agência:</em>  0387 &nbsp;&nbsp;&nbsp;&nbsp;<em>Conta:</em>  10246-0/500</br></br>
     <em>Valor:</em> #{@product.price}
 
-  %p Não esqueça de nos mandar uma mensagem abaixo!
+  %p.reminder Não esqueça de nos mandar uma mensagem!
+
+  = form_for Guest.new do |f|
+    = f.hidden_field :product_id, value: @product.id
+
+    .field
+      = f.text_field :name, placeholder: 'Nome', autofocus: true
+
+    .field
+      = f.email_field :email, placeholder: 'E-mail'
+
+    .field
+      = f.text_area :email_message, placeholder: 'Mensagem', rows: 10
+
+    = f.submit 'Enviar'
 

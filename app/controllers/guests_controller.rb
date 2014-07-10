@@ -5,6 +5,7 @@ class GuestsController < ApplicationController
 
   def create
     @guest = Guest.new guest_params
+
     if @guest.save
       redirect_to root_path
     else
@@ -15,6 +16,6 @@ class GuestsController < ApplicationController
   protected
 
   def guest_params
-    params.require(:guest).permit(:name, :email, :total_guests, :companies, :confirmed?)
+    params.require(:guest).permit(:name, :companies, :confirmed?, :email, :email_message, :product_id, :total_guests)
   end
 end

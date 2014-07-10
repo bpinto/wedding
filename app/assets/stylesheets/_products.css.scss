@@ -72,23 +72,78 @@
 
   img {
     display: block;
-    margin: 0 auto 10em auto;
+    margin: 0 auto 1em auto;
     min-height: 160px;
     width: 160px;
   }
 
+  .name {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 2.5em;
+  }
+
   .bank {
-    border: 1px dashed $pink;
     display: inline-block;
     font-size: 2em;
     font-weight: bold;
 
-    margin: 2em 0;
     padding: 1em;
 
     em {
       font-style: normal;
       font-weight: normal;
+    }
+  }
+
+  .reminder {
+    margin-top: 4em;
+    text-align: center;
+  }
+
+  input[type='text'], input[type='email'], textarea {
+    @include transition(all 0.3s ease);
+    border: 1px dashed $pink;
+    color: $gray;
+    font-family: 'Josefin Sans';
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+
+    @include placeholder {
+      color: darken($pink, 10%);
+    }
+
+    &:focus {
+      border: 1px dashed darken($pink, 40%);
+      outline: none;
+
+      @include placeholder {
+        color: lighten($pink, 10%);
+      }
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 1.5em;
+  }
+
+  input[type='submit'] {
+    background-color: white;
+    border: 1px dashed $pink;
+    color: darken($pink, 10%);
+    cursor: pointer;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: darken($pink, 40%);
+      border: 1px dashed darken($pink, 40%);
+      outline: none;
     }
   }
 }
