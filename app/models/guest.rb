@@ -34,7 +34,7 @@ class Guest < ActiveRecord::Base
       subject: 'Agradecimento - Bianca e Bruno',
       from_email: 'bianca_correia@hotmail.com',
       from_name: 'Bianca e Bruno',
-      text: 'Obrigado pelo carinho e por participar desse momento tão importante em nossas vidas. Adoramos o presente!',
+      text: "#{name}, obrigado pelo carinho e por participar desse momento tão importante em nossas vidas. Adoramos o presente!",
       to: [
         { email: email, name: name }
       ]
