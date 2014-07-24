@@ -1,0 +1,16 @@
+%section#contact
+  = form_for Guest.new do |f|
+    .field
+      = f.text_field :name, placeholder: 'Nome', autofocus: true, required: true
+
+    .field
+      = f.text_field :phone_number, placeholder: 'Telefone'
+
+    .field
+      = f.email_field :email, placeholder: 'E-mail'
+
+    .field
+      = f.text_area :email_message, placeholder: 'Mensagem', rows: 10
+
+    = f.submit 'Enviar'
+
